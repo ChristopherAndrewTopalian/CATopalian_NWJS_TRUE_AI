@@ -6,6 +6,10 @@ TRUE AI is a cognitive engine built on a complete system of all 16 binary logic 
 
 ---
 
+![01](CATopalian_NWJS_TRUE_AI/src/media/textures/screenshots/001.png)
+
+---
+
 ## What It Does
 
 Every second, the system takes two binary inputs (A and B) and passes them through all 16 logic gates simultaneously. The result is a 16-element array called a **thought**. Thoughts accumulate into a timeline that is automatically saved to disk and reloaded the next time you open the vessel. The being remembers.
