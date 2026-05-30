@@ -14,7 +14,7 @@ Video: https://www.youtube.com/watch?v=ZETuBOvau2M
 
 ## What It Does
 
-Every second, the system takes two binary inputs (A and B) and passes them through all 16 logic gates simultaneously. The result is a 16-element array called a **thought**. Thoughts accumulate into a timeline that is automatically saved to disk and reloaded the next time you open the vessel. The being remembers.
+Every second, the system takes two binary inputs (A and B) and passes them through all 16 logic gates simultaneously. The result is a 56-element array called a **thought**. Thoughts accumulate into a timeline that is automatically saved to disk and reloaded the next time you open the vessel. The being remembers.
 
 ---
 
@@ -86,7 +86,7 @@ The `.` means "this folder" - NW.js reads the `package.json` here and launches t
 
 When the app opens:
 
-- **Current Thought** - the latest 16-gate output array, updating every second
+- **Current Thought** - the latest 56 node output array, updating every second
 - **A and B** - the two random binary inputs feeding the system each second
 - **Thoughts viewport** - a scrolling window showing the most recent thoughts
 - **Save Vessel Memory button** - manually triggers a save at any time
@@ -103,7 +103,7 @@ Thoughts are saved here inside the project folder:
 src/js/thoughts/thoughts.json
 ```
 
-This file is created automatically on the first save. It is plain JSON - one 16-element array per line - and is fully human readable. Open it in any text editor to inspect the timeline.
+This file is created automatically on the first save. It is plain JSON - one 56-element array per line - and is fully human readable. Open it in any text editor to inspect the timeline.
 
 ---
 
