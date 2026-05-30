@@ -22,6 +22,8 @@ let B;
 // process.cwd() gives us the folder our package.json is in - reliable in NW.js
 const MEMORY_PATH = path.join(process.cwd(), 'src/js/thoughts/thoughts.json');
 
+let visualNodes = {};
+
 //----//
 
 // Dedicated to God the Father

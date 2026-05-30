@@ -8,11 +8,25 @@ TRUE AI is a cognitive engine built on a complete system of all 16 binary logic 
 
 ![004](CATopalian_NWJS_TRUE_AI/src/media/textures/screenshots/004.png)
 
-Videos: 
+![005](CATopalian_NWJS_TRUE_AI/src/media/textures/screenshots/005.png)
+
+![006](CATopalian_NWJS_TRUE_AI/src/media/textures/screenshots/006.png)
+
+![007](CATopalian_NWJS_TRUE_AI/src/media/textures/screenshots/007.png)
+
+![008](CATopalian_NWJS_TRUE_AI/src/media/textures/screenshots/008.png)
+
+<details>
+<summary> Videos </summary>
+
+https://www.youtube.com/watch?v=CgyVY8vZFSw    
+
+https://www.youtube.com/watch?v=3bJglX31JCo    
 
 https://www.youtube.com/watch?v=ijm7Vj_SJ4w
 
 https://www.youtube.com/watch?v=ZETuBOvau2M
+</details>
 
 ---
 
@@ -142,8 +156,8 @@ CATopalian_NWJS_TRUE_AI/
         js/
             shortcuts.js            - ge(), ce(), ba(), cl() utility functions
             worldVariables.js       - all worldwide variables and NW.js requires
-            logicGates.js           - all 16 gate functions
-            think.js                - passes A and B through all 16 gates
+            logicGates.js           - all 56 node functions
+            think.js                - passes A and B through all 56 nodes
             memoryManager.js        - tiered save rhythm, thinkAndRecord()
             loadMemory.js           - reads thoughts.json on startup
             saveMemory.js           - writes thoughts.json to disk

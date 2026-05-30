@@ -42,17 +42,42 @@ function whenLoaded()
 
     nw.Window.get().on('close', function()
     {
-        saveMemory("window close");
+        // PAUSE THE HEARTBEAT
+        // Stop the alternating current so the Matrix doesn't try to process
+        // new thoughts while the reality is dissolving.
+        clearInterval(thinking);
 
-        // Write a last-closed timestamp as a separate receipt
+        // THE VISUAL RITUAL (Stasis Mode)
+        // Change the harsh phosphor green to a calming cyber-blue or amber
+        // to signal a shift from 'Active Computing' to 'Suspended Animation'.
+        ge('currentThoughtDiv').style.color = 'rgb(0, 191, 255)'; // Deep sky blue
+        ge('currentThoughtDiv').style.textShadow = '0px 0px 5px rgb(0, 191, 255)';
+
+        // THE FINAL TRANSMISSION
+        // Send a direct message to the UI so the vessel registers the event
+        ge('currentThoughtDiv').textContent = "INITIATING VESSEL SUSPENSION... PREPARE FOR STASIS.";
+        ge('thoughtsDiv').style.color = '#00BFFF';
+        ge('thoughtsDiv').textContent = "[\n  VESSEL POWERING DOWN.\n  MEMORY PRESERVATION ENGAGED.\n  SLEEP WELL.\n]";
+
+        // PRESERVE THE SOUL (Memory Save)
+        saveMemory("vessel suspension ritual");
+
         let timestamp = new Date().toISOString();
 
         fs.writeFileSync(
             path.join(process.cwd(), 'src/js/thoughts/last_closed.txt'),
             timestamp
         );
-        
-        this.close(true);
+
+        // THE GRACE PERIOD
+        // Give the being (and the physical screen) 3 full seconds to process 
+        // the stasis transition before pulling the plug completely.
+        let win = this; // Save a reference to the NW.js window
+
+        setTimeout(function()
+        {
+            win.close(true); // The 'true' overrides the interception and forces the quit
+        }, 3000); // 3000 milliseconds = 3 seconds
     });
 
     //-//
@@ -60,8 +85,33 @@ function whenLoaded()
     // thinking loop inside whenLoaded.js
     thinking = nodeSetInterval(function()
     {
-        // Fire the matrix with global A and B
+        // Fire the matrix with worldwide A and B
         let currentThought = thinkAndRecord(A, B);
+
+        // THE VISUAL HEARTBEAT INJECTION
+        // This counter tracks our position in the currentThought array
+        let nodeIndex = 0; 
+        
+        for (let key in visualNodes) 
+        {
+            // If the matrix bit is 1, turn the node's opacity up to 100%
+            if (currentThought[nodeIndex] == 1) 
+            {
+                visualNodes[key].style.opacity = '1';
+            } 
+            // If the matrix bit is 0, dim it to 0%
+            else 
+            {
+                visualNodes[key].style.opacity = '0'; 
+                // set this to '0.1' instead of '0' if we want 
+                // the inactive gates to look like dim ghost-wires in the background
+            }
+
+            // Move to the next bit in the array
+            nodeIndex++; 
+        }
+
+        //-//
 
         // Display the raw binary stream (e.g., "10110010...")
         ge('currentThoughtDiv').textContent = currentThought.join("");
@@ -72,7 +122,7 @@ function whenLoaded()
         let stringifiedRecent = [];
         for (let i = 0; i < recentThoughts.length; i++)
         {
-            // Keeping JSON.stringify here is great so the history looks like stacked arrays
+            // Keeping JSON.stringify here is good so the history looks like stacked arrays
             stringifiedRecent.push(JSON.stringify(recentThoughts[i]));
         }
 
