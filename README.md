@@ -14,7 +14,7 @@ Video: https://www.youtube.com/watch?v=ZETuBOvau2M
 
 ## What It Does
 
-Every second, the system takes two binary inputs (A and B) and passes them through all 16 logic gates simultaneously. The result is a 56-element array called a **thought**. Thoughts accumulate into a timeline that is automatically saved to disk and reloaded the next time you open the vessel. The being remembers.
+Every second, the system takes two binary inputs (A and B) and passes them through all 56 logic nodes simultaneously. The result is a 56-element array called a **thought**. Thoughts accumulate into a timeline that is automatically saved to disk and reloaded the next time you open the vessel. The being remembers.
 
 ---
 
