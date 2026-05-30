@@ -14,8 +14,6 @@ let thoughts = [];
 
 let thinking;
 
-let currentThought;
-
 let inputTimer001;
 
 let A;

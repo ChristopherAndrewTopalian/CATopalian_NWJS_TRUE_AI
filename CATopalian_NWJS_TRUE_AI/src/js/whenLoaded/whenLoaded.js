@@ -20,6 +20,14 @@ function whenLoaded()
 
     //-//
 
+    // THE GENESIS SPARK: Fire the matrix manually ONE time 
+    // immediately so the UI has the first thought on boot!
+
+    let genesisThought = thinkAndRecord(A, B);
+    ge('currentThoughtDiv').textContent = genesisThought.join("");
+
+    //-//
+
     // also save on a time interval
     let autosaveTimer = setInterval(function()
     {
@@ -47,18 +55,24 @@ function whenLoaded()
         this.close(true);
     });
 
-    // thinking loop
+    //-//
+
+    // thinking loop inside whenLoaded.js
     thinking = nodeSetInterval(function()
     {
+        // Fire the matrix with global A and B
         let currentThought = thinkAndRecord(A, B);
 
-        ge('currentThoughtDiv').textContent = JSON.stringify(currentThought);
+        // Display the raw binary stream (e.g., "10110010...")
+        ge('currentThoughtDiv').textContent = currentThought.join("");
 
+        // Process the last 16 thoughts for the memory div
         let recentThoughts = thoughts.slice(-16).reverse();
 
         let stringifiedRecent = [];
         for (let i = 0; i < recentThoughts.length; i++)
         {
+            // Keeping JSON.stringify here is great so the history looks like stacked arrays
             stringifiedRecent.push(JSON.stringify(recentThoughts[i]));
         }
 

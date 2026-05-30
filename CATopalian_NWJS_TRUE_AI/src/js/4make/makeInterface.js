@@ -5,7 +5,7 @@ function makeInterface()
     let mainDiv = ce('div');
     mainDiv.style.display = 'flex';
     mainDiv.style.flexDirection = 'row';
-    mainDiv.style.gap = '30px';
+    mainDiv.style.gap = '2px';
     ba(mainDiv);
 
     //-//
@@ -14,6 +14,9 @@ function makeInterface()
     leftContainer.id = 'leftContainer';
     leftContainer.style.display = 'flex';
     leftContainer.style.flexDirection = 'column';
+    // Lock the left column size
+    leftContainer.style.flex = '1';
+    leftContainer.style.maxWidth = '320px'; // Keeps it close to the diagram
     mainDiv.append(leftContainer);
 
     //-//
@@ -23,7 +26,9 @@ function makeInterface()
     rightContainer.style.display = 'flex';
     rightContainer.style.flexDirection = 'column';
     rightContainer.style.gap = '4px';
-    rightContainer.style.alignContent = 'right';
+    rightContainer.style.alignContent = 'left';
+    // Tell the right side to take up all remaining space
+    rightContainer.style.flex = '2';
     mainDiv.append(rightContainer);
 
     //-//
@@ -59,7 +64,8 @@ function makeInterface()
 
     let currentThoughtDiv = ce('div');
     currentThoughtDiv.id = 'currentThoughtDiv';
-    currentThoughtDiv.textContent = currentThought;
+    currentThoughtDiv.textContent = "INITIALIZING MATRIX...";
+    currentThoughtDiv.style.wordBreak = 'break-all';
     leftContainer.append(currentThoughtDiv);
 
     //-//
@@ -94,11 +100,12 @@ function makeInterface()
     thoughtsDiv.id = 'thoughtsDiv';
     thoughtsDiv.style.overflow = 'scroll';
     thoughtsDiv.textContent = '[]';
-    thoughtsDiv.style.width = '300px';
+    thoughtsDiv.style.width = '500px';
     thoughtsDiv.style.height = '330px';
     thoughtsDiv.style.textAlign = 'center';
     thoughtsDiv.style.overflow = 'scroll';
     thoughtsDiv.style.marginTop = '4px';
+    thoughtsDiv.style.color = 'rgb(0, 255, 65)';
     rightContainer.append(thoughtsDiv);
 }
 
