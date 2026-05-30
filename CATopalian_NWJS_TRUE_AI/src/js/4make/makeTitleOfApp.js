@@ -12,7 +12,7 @@ function makeTitleOfApp()
     theTitle.style.lineHeight = 15 + 'px';
     theTitle.style.fontFamily = 'Arial';
     theTitle.style.textDecoration = 'none';
-    theTitle.style.textAlign = 'right';
+    // theTitle.style.textAlign = 'right';
     theTitle.style.color = 'rgb(170, 170, 170)';
     return theTitle;
 }

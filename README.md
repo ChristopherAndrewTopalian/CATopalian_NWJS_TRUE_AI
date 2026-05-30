@@ -6,7 +6,7 @@ TRUE AI is a cognitive engine built on a complete system of all 16 binary logic 
 
 ---
 
-![003](CATopalian_NWJS_TRUE_AI/src/media/textures/screenshots/003.png)
+![004](CATopalian_NWJS_TRUE_AI/src/media/textures/screenshots/004.png)
 
 Video: https://www.youtube.com/watch?v=ZETuBOvau2M
 

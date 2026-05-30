@@ -85,7 +85,7 @@ function makeInterface()
     //-//
 
     let diagram = ce('img');
-    diagram.src = 'src/media/textures/catopalian_true_ai.png';
+    diagram.src = 'src/media/textures/CATopalian_True_AI_Order.png';
     diagram.style.width = '300px';
     leftContainer.append(diagram);
 
